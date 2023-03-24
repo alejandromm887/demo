@@ -31,7 +31,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 
 @RestController
-@RequestMapping(value = "/api/v1/")
+@RequestMapping(value = "/api/v1/home")
 @CrossOrigin("*")
 @Tag(name="Personas", description = "Metodos CRUD para creación de personas")
 public class PersonaRestController {
