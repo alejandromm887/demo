@@ -8,28 +8,36 @@ import javax.persistence.Id;
 
 import org.springframework.lang.NonNull;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 
 @Entity
+@Schema(name="Persona", description="Caracteristica de persona")
 public class Persona {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Schema(description="Identificacion unica de persona", maxLength=50)
 	private Long id;
 	
 	@Column
 	@NonNull
+	@Schema(description="Nombre de la persona", maxLength=50)
 	private String nombre;
 	
 	@Column
 	@NonNull
+	@Schema(description="Apellido de la persona", maxLength=50)
 	private String apellido;
 	
 	@Column
 	@NonNull
+	@Schema(description="Direccion de la persona", maxLength=50)
 	private String direccion;
 	
 	@Column
 	@NonNull
+	@Schema(description="Telefono de la persona", maxLength=50)
 	private String telefono;
 
 	public Long getId() {
