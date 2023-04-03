@@ -23,8 +23,8 @@ import com.example.demo.service.api.PersonaServiceAPI;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
+//import io.swagger.v3.oas.annotations.responses.ApiResponse;
+//import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 
@@ -63,7 +63,7 @@ public class PersonaRestController {
 	}
 
 	@GetMapping(value = "/delete/{id}")
-	@Operation(summary = "Eliminar persona por ID", description = "Se elimina una persona en específico", responses= {@ApiResponse(description = "Successful Operation", responseCode = "200", content = @Content(mediaType = "application/json", schema = @Schema(implementation = String.class))),})
+	@Operation(summary = "Eliminar persona por ID", description = "Se elimina una persona en específico")
 	//@ApiResponses(value= {@ApiResponse(responseCode="404", description="Id no encontrado", 
 		//			content = {
           //          @Content(mediaType = "application/json", schema = @Schema(implementation = Persona.class))

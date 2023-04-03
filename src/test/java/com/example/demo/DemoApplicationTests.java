@@ -22,9 +22,10 @@ class DemoApplicationTests {
 	@Test
 	public void crearUsuarioTest() {
 		Usuario us = new Usuario();
-		us.setId(2);
-		us.setNombre("sandrix");
+		us.setId(3);
+		us.setNombre("alejo");
 		us.setClave(encoder.encode("0000"));
+		us.setRol(4);
 		
 		Usuario retorno = repo.save(us);
 		
